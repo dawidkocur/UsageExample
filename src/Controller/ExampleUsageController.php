@@ -23,7 +23,7 @@ class ExampleUsageController extends AbstractController
         $url = 'https://api.openbrewerydb.org/breweries/search?query='.$term;
         $user = 'Stefan Siara';
         $password = 'siara';
-        $content = $requestBaseAuth->sendRequest($url, $data = '', "GET", $user, $password);
+        $content = $requestBaseAuth->sendRequest($url, $data = '', 'GET', $user, $password);
 
         return new JsonResponse($content);
     }
